@@ -1,0 +1,46 @@
+.loggedOutHome {
+  height: 100vh;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-repeat: repeat;
+    background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.8) 0,
+        rgba(0, 0, 0, 0) 60%,
+        rgba(0, 0, 0, 0.8) 100%
+      ),
+      url('../../assets/images/hero-not-loged-in.jpg');
+    z-index: -1;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20vh;
+    padding: 0 3rem;
+
+    & > img {
+      height: 4rem;
+      width: 13.5rem;
+    }
+
+    & > a {
+      text-decoration: none;
+      background-color: var(--color-netflix-red-light);
+      padding: 0.7rem 1.5rem;
+      color: #fff;
+      font-weight: 400;
+      border-radius: 0.5rem;
+      font-size: 1.6rem;
+    }
+  }
+}
