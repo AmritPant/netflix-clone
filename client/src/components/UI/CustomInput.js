@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Input, FormLabel } from '@chakra-ui/react';
+import { FormLabel } from '@chakra-ui/react';
 
 function CustomInput({
   animation = false,
