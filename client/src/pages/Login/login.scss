@@ -1,0 +1,43 @@
+.login {
+  height: 100vh;
+  background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(50%, rgba(0, 0, 0, 0)),
+      to(rgba(0, 0, 0, 0.7))
+    ),
+    radial-gradient(50% 100%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%);
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-repeat: repeat;
+    background-image: url('../../assets/images/hero-not-loged-in.jpg');
+    z-index: -1;
+  }
+
+  &__loginBox {
+    background-color: rgba(0, 0, 0, 0.75);
+    align-self: center;
+    height: auto;
+    padding: 2rem 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    & > h1 {
+      color: #fff;
+      font-size: 4rem;
+      font-weight: 900;
+      margin-bottom: 2rem;
+    }
+  }
+}
