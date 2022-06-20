@@ -6,6 +6,8 @@ function CustomInput({
   type = 'text',
   children,
   placeholder = '',
+  bgColor,
+  color,
 }) {
   const [curClass, setClass] = useState('');
 
@@ -27,6 +29,7 @@ function CustomInput({
         onFocus={onFocusHandler}
         onBlur={onBlurHandler}
         placeholder={animation ? '' : placeholder}
+        style={{ backgroundColor: bgColor, color: color }}
       />
       {animation && (
         <FormLabel
