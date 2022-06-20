@@ -16,7 +16,13 @@ function InfoBox() {
         Ready to watch? Enter your email to create or restart your membership.
       </p>
       <form className="loggedOutHome__form">
-        <CustomInput animation="true" type="email" color="#000">
+        <CustomInput
+          animation="true"
+          type="email"
+          color="#000"
+          lablelColor="#333"
+          h="5rem"
+        >
           Email Address
         </CustomInput>
         <Button
