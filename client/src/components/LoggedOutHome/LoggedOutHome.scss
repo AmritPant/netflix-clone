@@ -1,6 +1,17 @@
 .loggedOutHome {
   height: 100vh;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(50%, rgba(0, 0, 0, 0)),
+      to(rgba(0, 0, 0, 0.7))
+    ),
+    radial-gradient(50% 100%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%);
 
   &::before {
     content: '';
@@ -20,6 +31,8 @@
       url('../../assets/images/hero-not-loged-in.jpg');
     z-index: -1;
   }
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  //  Header
 
   &__header {
     display: flex;
@@ -43,4 +56,69 @@
       font-size: 1.6rem;
     }
   }
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  //  InfoBox
+  &__infoBox {
+    align-self: center;
+    justify-self: center;
+    color: #fff;
+
+    & > div {
+      padding: 4rem;
+    }
+
+    // Heading 1
+    & > div > h1 {
+      font-size: 4rem;
+      font-weight: 900;
+      margin-bottom: 0.5rem;
+      text-align: center;
+      & > span {
+        text-align: center;
+        display: block;
+        margin-top: -1rem;
+      }
+    }
+
+    // Heading 2
+    & > div > h2 {
+      text-align: center;
+      font-weight: 500;
+      font-size: 2.3rem;
+    }
+
+    & > p {
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+  }
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  //  FORM
+  &__form {
+    position: relative;
+    color: #fff;
+    display: flex;
+
+    & > input {
+      height: 5rem;
+      background-color: #fff;
+      color: #000;
+      font-size: 1.6rem;
+      width: 100%;
+      outline: none;
+      padding: 0.5rem 1rem 0 1rem;
+    }
+  }
+}
+
+.labelAnimation {
+  box-shadow: none;
+  color: #333;
+  top: 0.3rem !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  outline: none;
+  margin-bottom: 1rem;
 }
