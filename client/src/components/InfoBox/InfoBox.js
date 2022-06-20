@@ -1,6 +1,6 @@
 import { Button } from '@chakra-ui/react';
 import React from 'react';
-import CustomInput from '../../UI/CustomInput';
+import CustomInput from '../UI/CustomInput';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 
 function InfoBox() {

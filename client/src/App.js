@@ -1,5 +1,5 @@
 import React from 'react';
-import LoggedOutHome from './components/LoggedOutHome/LoggedOutHome';
+import LoggedOutHome from './pages/LoggedOutHome/LoggedOutHome';
 
 function App() {
   return (

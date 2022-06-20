@@ -1,5 +1,5 @@
 import React from 'react';
-import NetflixLogo from '../../../assets/images/netflix-logo-logout.svg';
+import NetflixLogo from '../../assets/images/netflix-logo-logout.svg';
 
 function Header() {
   return (
