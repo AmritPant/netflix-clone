@@ -10,8 +10,6 @@ const file = fs.readFileSync(
   'utf-8'
 );
 
-console.log(file);
-
 router.get('/', (req, res) => {
   axios
     .get('https://api.ipify.org/?format=json')
@@ -19,13 +17,14 @@ router.get('/', (req, res) => {
       const ip = data.data.ip;
       axios
         .get(`https://ipapi.co/${ip}/json/`)
-        .then(data => {
-          const countryCode = data.data.country_code.toLowerCase();
-          if (!countryCode.ok) throw new Error('Something went wrong');
-          return res.redirect(`/${countryCode}/`);
+        .then(response => {
+          const { data } = response;
+          if (data.error)
+            throw new Error('Something went wrong on Server (Error Code: 500)');
+          return res.redirect(`/${data.country_code.toLowerCase()}/`);
         })
         .catch(err => {
-          return res.status(500).json(err);
+          return res.status(500).send(`<h1>${err.message}</h1>`);
         });
     })
     .catch(err => res.status(500).json(err));
